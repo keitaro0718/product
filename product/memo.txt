@@ -1,0 +1,47 @@
+//ボタンを押したら…、1．位置情報の取得に成功した時の処理
+$("#button").on("click", function(){
+  $("#button").hide()
+  $("#note").hide()
+  navigator.geolocation.getCurrentPosition(mapsInit, mapsError, set);
+  function mapsInit(position) {
+    //lat=緯度、lon=経度 を取得
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    $.ajax({
+      url: `http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=5f6ee2c5c1419f32&lat=${lat}&lng=${lon}&range=5&order=4&format=jsonp`,
+      type: 'GET',
+      dataType: 'jsonp',
+      jsonpCallback: 'callback'
+    }).done(function(data) {
+      const shop = data.results.shop
+      console.log(shop); // 成功時 
+      for(let i = 0; i<shop.length; i++){
+        $(`#res${i}`).html(`<ul><img src="${shop[i].logo_image}"><br><li>店名：${shop[i].name}</li><br><li>予算：${shop[i].budget.average}</li><br><li>アクセス：${shop[i].access}</li><br><li><a href="${shop[i].urls.pc}">URL</a></li></ul>`)
+         let pin = map.pinText(`${shop[i].lat}`, `${shop[i].lng}`, `${shop[i].name}`, "店の位置", `${i}`);
+      // }
+      } 
+    }).fail(function(data) {
+      alert("失敗"); // 失敗時
+    });
+    
+  }
+//2. Errorが出たときの対応
+  function mapsError(error){
+    if(error.code==1){
+      alert("位置情報の取得が許可されていない")
+    }
+    else if(error.code==2){
+      alert("位置情報の取得が利用できない")
+    }
+    if(error.code==3){
+      alert("タイムアウト")
+    }
+  }
+  //3.位置情報取得オプション
+  var set ={
+    enableHighAccuracy: true, //より高精度な位置を求める
+    maximumAge: 20000,        //最後の現在地情報取得が20秒以内であればその情報を再利用する設定
+    timeout: 10000            //10秒以内に現在地情報を取得できなければ、処理を終了
+  };
+  
+})  // onclickはここまで
