@@ -23,7 +23,7 @@ sschk();
             <div class="header_inner">
                 <div class="header_left">
                     <h1 class="header_title">
-                    <a href="index.php">Find What Japanese Do</a>    
+                    <a href="index.php">Japan Picks</a>    
                     </h1>
                 </div>
 
@@ -41,23 +41,31 @@ sschk();
 <!-- Head[End] -->
 
 <!-- Main[Start] -->
-<form method="post" action="user_insert.php">
-  <div class="jumbotron">
-   <fieldset>
-    <legend>ユーザー登録</legend>
-     <label>名前：<input type="text" name="name"></label><br>
-     <label>Login ID：<input type="text" name="lid"></label><br>
-     <label>Login PW<input type="text" name="lpw"></label><br>
-     <label>管理FLG：
-      一般<input type="radio" name="kanri_flg" value="0">　
-      管理者<input type="radio" name="kanri_flg" value="1">
-    </label>
-    <br>
-     <!-- <label>退会FLG：<input type="text" name="life_flg"></label><br> -->
-     <input type="submit" value="送信">
-    </fieldset>
-  </div>
-</form>
+<div class="main_banner_wrapper">
+    <img src="./img/IMG_4602.jpg" class="user_main_banner" alt="">
+    <div class="main_banner_wrapper_child">
+
+        <form method="post" action="user_insert.php">
+        <div class="jumbotron">
+        <fieldset>
+            <legend class="register_title">ユーザー登録</legend>
+            <label>名前：<input type="text" name="name"></label><br>
+            <label>ログインID：<input type="text" name="lid"></label><br><br>
+            <label>Login PW：<input type="text" name="lpw"></label><br>
+            <label>管理FLG：
+            一般<input type="radio" name="kanri_flg" value="0">　
+            管理者<input type="radio" name="kanri_flg" value="1">
+            </label>
+            <br>
+            <!-- <label>退会FLG：<input type="text" name="life_flg"></label><br> -->
+            <input type="submit" value="登録">
+            </fieldset>
+        </div>
+        </form>
+        <p>アカウントがある場合</p>
+        <a href="login.php">ログイン</a>
+    </div>
+</div>
 <!-- Main[End] -->
 
 

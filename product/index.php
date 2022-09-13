@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>What Japanese Do</title>
+        <title>Japan Picks</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -15,7 +15,7 @@
             <div class="header_inner">
                 <div class="header_left">
                     <h1 class="header_title">
-                        Find What Japanese Do
+                        Japan Picks
                     </h1>
                     <div class="header_search-box_input">
                         <input type="text" name="q" class="header_search-box" value="行き先・アクティビティを入力">
@@ -45,7 +45,7 @@
         <!-- Main[Start] -->
         <div class="main_banner">
                 <img src="./img/onsen.jpg" class="main_banner_img" alt="main_banner">
-                <h1 class="main_banner_title">Find What Japanese Do</h1>
+                <h1 class="main_banner_title">Japan Picks</h1>
                 <p class="main_banner_subtitle">日本人の間で流行っているお店・アクティビティが見つかる</p>
                 <div class="main_banner_search-area">
                     <input type="text" name="q" class="main_banner_search-box" value>
@@ -176,7 +176,7 @@
         <!-- Main[End] -->
         <footer class="footer">
             <small class="copyrights">
-            copyrights 2022 Find What Japanese Do All Rights Reserved.
+            copyrights 2022 Japan Picks All Rights Reserved.
             </small>
         </footer>
 

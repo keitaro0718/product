@@ -42,6 +42,9 @@ a{
     border-radius: 99rem;
     color:white;
 }
+.navbar-brand_on{
+    font-weight: bold;
+}
 
 
 .header_secondary_container{
@@ -166,6 +169,17 @@ a{
     padding: 30px;
     font-weight: bold;
 }
+.sauna_main_banner{
+    text-align: center;
+
+}
+.sauna_main_banner_img{
+    max-width: 100%;
+}
+.info_title{
+    font-size: 24px;
+
+}
 
 .restaurant_title{
     font-size: 24px;
@@ -174,6 +188,13 @@ a{
 .hotel_title{
     font-size: 24px;
     max-width: 100%;
+    margin-bottom: 30px;
+}
+.list_title{
+    font-size: 24px;
+    max-width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .sauna_title{
     font-size: 24px;
@@ -263,6 +284,48 @@ a{
 .fav_list{
     display: flex;
     flex-wrap: wrap;
+}
+
+.user_main_banner{
+    max-width: 1200px;
+    height: auto;
+}
+
+.main_banner_wrapper{
+    text-align: center;
+    position: relative;
+}
+
+.main_banner_wrapper_child{
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+    top: 30%;
+    left: 60%;
+
+    background-color: white;
+    border-radius: 10px;
+    line-height: 1.5em;
+}
+
+
+
+.register_title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.login_id{
+    width: 200px;
+    line-height: 1.5em;
+    margin: 2em 0em;
+}
+.login_pw{
+    width: 200px;
+    line-height: 1.5em;
+    margin: 0em 0em 2em 0em;
 }
 
 /* footer */
